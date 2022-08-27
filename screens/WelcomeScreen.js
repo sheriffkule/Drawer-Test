@@ -5,7 +5,7 @@ function WelcomeScreen() {
   return (
     <View style={styles.rootContainer}>
       <Text>
-        This is the <Text style={styles.highlight}>"Welcome"</Text> screen!
+        <Text style={styles.highlight}>"Welcome"</Text>
       </Text>
     </View>
   );

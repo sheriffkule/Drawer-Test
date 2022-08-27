@@ -1,14 +1,17 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, Button} from 'react-native';
 
-function UserScreen() {
+function UserScreen({route, navigation}) {
+  function openDrawerHandler() {
+    navigation.toggleDrawer();
+  }
+
   return (
     <View style={styles.rootContainer}>
       <Text>
-        This is the{' '}
         <Text style={styles.highlight}>"Micika, Bracika, Cicika, Picika."</Text>
-        screen!
       </Text>
+      <Button title="Open Drawer" onPress={openDrawerHandler} />
     </View>
   );
 }
