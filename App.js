@@ -19,7 +19,7 @@ export default function App() {
           drawerActiveBackgroundColor: '#1d3658',
           drawerActiveTintColor: '#0eaf69',
           drawerInactiveTintColor: '#0eaf69',
-          drawerStyle: {backgroundColor: '#011628', opacity: 0.4},
+          drawerStyle: {backgroundColor: '#011628'},
           drawerType: 'slide',
           drawerStatusBarAnimation: 'fade', //only on IOS
         }}>
