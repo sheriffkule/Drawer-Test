@@ -14,11 +14,14 @@ export default function App() {
       <Drawer.Navigator
         screenOptions={{
           headerStyle: {backgroundColor: 'black'},
-          headerTintColor: 'green',
+          headerTintColor: '#a7dadc',
           headerTitleAlign: 'center',
-          drawerActiveBackgroundColor: 'black',
-          drawerActiveTintColor: 'pink',
-          drawerStyle: {backgroundColor: 'green'},
+          drawerActiveBackgroundColor: '#1d3658',
+          drawerActiveTintColor: '#0eaf69',
+          drawerInactiveTintColor: '#0eaf69',
+          drawerStyle: {backgroundColor: '#011628', opacity: 0.4},
+          drawerType: 'slide',
+          drawerStatusBarAnimation: 'fade', //only on IOS
         }}>
         <Drawer.Screen
           name="Welcome"

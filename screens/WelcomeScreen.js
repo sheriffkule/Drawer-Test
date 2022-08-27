@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   highlight: {
+    fontSize: 33,
     fontWeight: 'bold',
     color: '#eb1064',
   },
