@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet, Button} from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 
 function UserScreen({route, navigation}) {
   function openDrawerHandler() {
@@ -7,12 +8,20 @@ function UserScreen({route, navigation}) {
   }
 
   return (
-    <View style={styles.rootContainer}>
-      <Text>
-        <Text style={styles.highlight}>"Micika, Bracika, Cicika, Picika."</Text>
-      </Text>
-      <Button title="Open Drawer" onPress={openDrawerHandler} />
-    </View>
+    <LinearGradient
+      colors={['#191970', '#263bd9', '#3cadd4']}
+      start={{x: 0.5, y: 0.2}}
+      locations={[0, 0.3, 0.9]}
+      style={styles.rootContainer}>
+      <View>
+        <Text>
+          <Text style={styles.highlight}>
+            "Micika, Bracika, Cicika, Picika."
+          </Text>
+        </Text>
+        <Button title="Open Drawer" onPress={openDrawerHandler} />
+      </View>
+    </LinearGradient>
   );
 }
 

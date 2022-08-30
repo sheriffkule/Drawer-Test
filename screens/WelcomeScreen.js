@@ -1,13 +1,20 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 
 function WelcomeScreen() {
   return (
-    <View style={styles.rootContainer}>
-      <Text>
-        <Text style={styles.highlight}>"Welcome"</Text>
-      </Text>
-    </View>
+    <LinearGradient
+      colors={['#191970', '#263bd9', '#3cadd4']}
+      start={{x: 0.5, y: 0.2}}
+      locations={[0, 0.3, 0.9]}
+      style={styles.rootContainer}>
+      <View style>
+        <Text>
+          <Text style={styles.highlight}>"Welcome"</Text>
+        </Text>
+      </View>
+    </LinearGradient>
   );
 }
 
