@@ -2,11 +2,10 @@ import React from 'react';
 import {View, Text, StyleSheet, Button} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
-function UserScreen({route, navigation}) {
+function GoalsScreen({route, navigation}) {
   function openDrawerHandler() {
     navigation.toggleDrawer();
   }
-
   return (
     <LinearGradient
       colors={['#191970', '#263bd9', '#3cadd4']}
@@ -15,7 +14,11 @@ function UserScreen({route, navigation}) {
       style={styles.rootContainer}>
       <View>
         <Text style={styles.highlight}>
-          <Text>"Sheriff Kule."</Text>
+          <Text>
+            "Welcome to the wonderful world of React Native. I am working hard
+            in an effort to learn as best as possible, and to become a good
+            front end React Native developer."
+          </Text>
         </Text>
         <View style={styles.buttonContainer}>
           <Button
@@ -29,7 +32,7 @@ function UserScreen({route, navigation}) {
   );
 }
 
-export default UserScreen;
+export default GoalsScreen;
 
 const styles = StyleSheet.create({
   rootContainer: {
@@ -41,12 +44,15 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#eb1064',
     fontStyle: 'italic',
-    fontSize: 35,
+    fontSize: 25,
     marginHorizontal: 10,
   },
   buttonContainer: {
     paddingTop: 20,
     width: 150,
     alignSelf: 'center',
+  },
+  button: {
+    paddingTop: 20,
   },
 });

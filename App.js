@@ -5,6 +5,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import WelcomeScreen from './screens/WelcomeScreen';
 import UserScreen from './screens/UserScreen';
+import GoalsScreen from './screens/GoalsScreen';
 
 const Drawer = createDrawerNavigator();
 
@@ -36,6 +37,15 @@ export default function App() {
         <Drawer.Screen
           name="User"
           component={UserScreen}
+          options={{
+            drawerIcon: ({color, size}) => (
+              <Ionicons name="person" color={color} size={size} />
+            ),
+          }}
+        />
+        <Drawer.Screen
+          name="Goals"
+          component={GoalsScreen}
           options={{
             drawerIcon: ({color, size}) => (
               <Ionicons name="person" color={color} size={size} />
