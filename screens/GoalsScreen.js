@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   },
   highlight: {
     fontWeight: 'bold',
-    color: '#eb1064',
+    color: '#E8EAF6',
     fontStyle: 'italic',
     fontSize: 25,
     marginHorizontal: 10,

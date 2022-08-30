@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet, Button} from 'react-native';
+import {View, Text, StyleSheet, Button, Image} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
 function UserScreen({route, navigation}) {
@@ -13,7 +13,11 @@ function UserScreen({route, navigation}) {
       start={{x: 0.5, y: 0.2}}
       locations={[0, 0.3, 0.9]}
       style={styles.rootContainer}>
-      <View>
+      <View style={styles.imageContainer}>
+        <Image
+          style={styles.image}
+          source={require('../assets/images/the-good-bad-ugly-ex.jpg')}
+        />
         <Text style={styles.highlight}>
           <Text>"Sheriff Kule."</Text>
         </Text>
@@ -34,18 +38,30 @@ export default UserScreen;
 const styles = StyleSheet.create({
   rootContainer: {
     flex: 1,
-    justifyContent: 'center',
+    //justifyContent: 'center',
     alignItems: 'center',
   },
+  imageContainer: {
+    flex: 1,
+    justifyContent: 'flex-start',
+    paddingTop: 40,
+  },
+  image: {
+    maxWidth: 350,
+    maxHeight: 300,
+  },
   highlight: {
+    alignSelf: 'center',
+    flex: 1,
     fontWeight: 'bold',
-    color: '#eb1064',
+    color: '#E8EAF6',
     fontStyle: 'italic',
     fontSize: 35,
     marginHorizontal: 10,
+    marginTop: 20,
   },
   buttonContainer: {
-    paddingTop: 20,
+    flex: 3,
     width: 150,
     alignSelf: 'center',
   },
