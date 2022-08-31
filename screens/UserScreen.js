@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
   imageContainer: {
     flex: 1,
     justifyContent: 'flex-start',
-    paddingTop: 40,
+    paddingTop: 20,
   },
   image: {
     maxWidth: 350,
@@ -52,17 +52,16 @@ const styles = StyleSheet.create({
   },
   highlight: {
     alignSelf: 'center',
-    flex: 1,
     fontWeight: 'bold',
     color: '#E8EAF6',
     fontStyle: 'italic',
     fontSize: 35,
     marginHorizontal: 10,
-    marginTop: 20,
+    marginTop: 15,
   },
   buttonContainer: {
-    flex: 3,
     width: 150,
     alignSelf: 'center',
+    marginTop: 12,
   },
 });

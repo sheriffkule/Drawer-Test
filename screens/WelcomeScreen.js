@@ -29,6 +29,6 @@ const styles = StyleSheet.create({
   highlight: {
     fontSize: 33,
     fontWeight: 'bold',
-    color: '#eb1064',
+    color: '#ffebcd',
   },
 });
