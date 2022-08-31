@@ -48,7 +48,7 @@ export default function App() {
           component={GoalsScreen}
           options={{
             drawerIcon: ({color, size}) => (
-              <Ionicons name="person" color={color} size={size} />
+              <Ionicons name="list" color={color} size={size} />
             ),
           }}
         />
