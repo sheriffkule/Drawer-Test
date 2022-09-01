@@ -1,4 +1,5 @@
 import React from 'react';
+import {Image} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -6,6 +7,15 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import WelcomeScreen from './screens/WelcomeScreen';
 import UserScreen from './screens/UserScreen';
 import GoalsScreen from './screens/GoalsScreen';
+
+function LogoTitle() {
+  return (
+    <Image
+      style={{width: 50, height: 50}}
+      source={require('./assets/images/react.png')}
+    />
+  );
+}
 
 const Drawer = createDrawerNavigator();
 
@@ -23,6 +33,7 @@ export default function App() {
           drawerStyle: {backgroundColor: '#011628'},
           drawerType: 'slide',
           drawerStatusBarAnimation: 'fade', //only on IOS
+          headerTitle: props => <LogoTitle {...props} />,
         }}>
         <Drawer.Screen
           name="Welcome"
