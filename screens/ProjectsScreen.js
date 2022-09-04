@@ -1,8 +1,30 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, StyleSheet } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 
 function ProjectsScreen() {
-    return <Text>This is Projects Screen</Text>
+    return (
+        <LinearGradient
+            colors={['#191970', '#263bd9', '#3cadd4']}
+            start={{ x: 0.5, y: 0.2 }}
+            locations={[0, 0.3, 0.9]}
+            style={styles.rootContainer}>
+        <Text style={styles.title}>This is Projects Screen</Text>
+        </LinearGradient>
+    )
 }
 
 export default ProjectsScreen;
+
+const styles = StyleSheet.create({
+    rootContainer: {
+    flex: 1,
+    },
+    title: {
+        fontSize: 20,
+        color: 'white',
+        alignSelf: 'center',
+        marginTop: 12,
+        color: '#aed9e0',
+    },
+});

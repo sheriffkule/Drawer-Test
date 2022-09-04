@@ -1,7 +1,6 @@
 import React from 'react';
 import {StatusBar} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -10,11 +9,8 @@ import WelcomeScreen from './screens/WelcomeScreen';
 import UserScreen from './screens/UserScreen';
 import GoalsScreen from './screens/GoalsScreen';
 import LogoTitle from './components/UI/LogoTitle';
-import HomeScreen from './screens/HomeScreen';
 import ProjectsScreen from './screens/ProjectsScreen';
 import ResourcesScreen from './screens/ResourcesScreen';
-
-const Stack = createNativeStackNavigator();
 
 const BottomTabs = createBottomTabNavigator();
 
@@ -26,13 +22,30 @@ function HomeScreenNavigator() {
     <BottomTabs.Navigator
       initialRouteName='Home'
       screenOptions={{
-      headerTitleAlign: 'center'
-    }}>
-      <BottomTabs.Screen name="Home" component={WelcomeScreen} options={{
+        tabBarStyle: { backgroundColor: '#01bbef' },
+        tabBarActiveBackgroundColor: '#05688f',
+        tabBarActiveTintColor: '#21c056',
+        tabBarInactiveTintColor: '#5d6c74',
         headerShown: false,
+    }}>
+      <BottomTabs.Screen name="Home" component={WelcomeScreen}
+        options={{
+        tabBarIcon: ({ color, size }) => (
+          <Ionicons name="home" color={color} size={size} />
+        ),
+}} />
+      <BottomTabs.Screen name="Projects" component={ProjectsScreen} options={{
+        tabBarIcon: ({ color, size }) => (
+          <Ionicons name="construct" color={color} size={size} />
+        ),
       }} />
-      <BottomTabs.Screen name="Projects" component={ProjectsScreen} />
-      <BottomTabs.Screen name="Resources" component={ResourcesScreen} />
+      <BottomTabs.Screen name="Resources" component={ResourcesScreen}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="code-working" color={color} size={size} />
+          ),
+      }}
+      />
     </BottomTabs.Navigator>
   );
 }
@@ -43,7 +56,7 @@ export default function App() {
     <StatusBar barStyle={'light-content'} />
     <NavigationContainer>
       <Drawer.Navigator
-        screenOptions={{
+          screenOptions={{
           headerStyle: { backgroundColor: 'black' },
           headerTintColor: '#a7dadc',
           headerTitleAlign: 'center',
@@ -59,6 +72,7 @@ export default function App() {
           name="Welcome"
           component={HomeScreenNavigator}
             options={{
+            drawerStatusBarAnimation: 'slide',
             drawerLabel: 'Home',
             drawerIcon: ({ color, size }) => (
               <Ionicons name="home" color={color} size={size} />
@@ -67,7 +81,7 @@ export default function App() {
         />
         <Drawer.Screen
           name="User"
-          component={UserScreen}
+            component={UserScreen}
           options={{
             drawerIcon: ({ color, size }) => (
               <Ionicons name="person" color={color} size={size} />
