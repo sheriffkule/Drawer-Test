@@ -1,6 +1,7 @@
 import React from 'react';
 import {Text, StyleSheet} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import MyLinks from '../components/MyLinks';
 
 function ResourcesScreen() {
     return (
@@ -9,7 +10,8 @@ function ResourcesScreen() {
             start={{ x: 0.5, y: 0.2 }}
             locations={[0, 0.3, 0.9]}
             style={styles.rootContainer}>
-    <Text style={styles.title}>Internet recources for learning.</Text>
+            <Text style={styles.title}>Internet recources for learning.</Text>
+            <MyLinks />
     </LinearGradient>
     )
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet, Button, Image,} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import MyLinks from '../components/MyLinks';
+import ContactLinks from '../components/ContactLinks';
 
 function UserScreen({route, navigation}) {
   function openDrawerHandler() {
@@ -29,7 +29,7 @@ function UserScreen({route, navigation}) {
             onPress={openDrawerHandler}
           />
         </View>
-        <MyLinks />
+        <ContactLinks />
       </View>
     </LinearGradient>
   );
